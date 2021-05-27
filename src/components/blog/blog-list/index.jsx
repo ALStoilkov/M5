@@ -6,7 +6,7 @@ import posts from "../../../data/posts.json";
 export default class BlogList extends Component {
   state = { posts: [] };
   componentDidMount = async () => {
-    // console.log(process.env.REACT_APP_LOCAL_BE);
+    // console.log(process.env.REACT_APP_API_BE);
     const res = await fetch(process.env.REACT_APP_LOCAL_BE + "/blogPosts");
     const posts = await res.json();
     // console.log(posts);
